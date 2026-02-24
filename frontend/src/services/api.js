@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create an Axios instance
 const api = axios.create({
-    baseURL: 'http://localhost:5001/api'
+    baseURL: import.meta.env.VITE_API_URL || 'https://algovantage-api.onrender.com/api'
 });
 
 export const fetchAllUserData = async (handle) => {
