@@ -10,7 +10,18 @@ const app = express();
 
 // Security and Utility Middleware
 app.use(helmet());
-app.use(cors({ origin: config.corsOrigin }));
+app.use(cors({
+  origin: config.corsOrigin,
+  exposedHeaders: ['Access-Control-Allow-Private-Network']
+}));
+
+// Middleware for Private Network Access (stops the browser 'permission' prompt)
+app.use((req, res, next) => {
+  if (req.headers['access-control-request-private-network']) {
+    res.setHeader('Access-Control-Allow-Private-Network', 'true');
+  }
+  next();
+});
 app.use(morgan('dev'));
 app.use(express.json());
 
