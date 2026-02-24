@@ -2,6 +2,10 @@
 
 **AlgoVantage** is an elite, production-grade analytics platform for Competitive Programmers. Designed with a premium "Mission Control" aesthetic, it provides deep insights, proficiency tracking, and algorithmic forecasting for Codeforces athletes.
 
+## 🌐 Live Demo
+**Check out the live application here: [https://algo-vantage.vercel.app/](https://algo-vantage.vercel.app/)**
+
+
 ## ✨ Core Features
 
 - **Mission Control Dashboard**: A high-impact, glassmorphism UI for visualizing your competitive journey.
